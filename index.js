@@ -5,11 +5,12 @@ const app = express()
 const mysql = require("mysql")
 
 var con = mysql.createConnection({
-    host: "mysql.railway.internal",
-    user: "root",
-    port:3306,
-    password: "yjiFEBioMnuwbKWBWtLhfvAQtovfPmaO",
-    database: "railway"
+    host: process.env.MYSQLHOST,
+    user: process.env.MYSQLUSER,
+    port:process.env.MYSQLPORT,
+    password: process.env.MYSQLPASSWORD,
+    database: process.env.MYSQLDATABASE
+
 });
 
 con.connect(function(err) {
