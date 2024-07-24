@@ -17,7 +17,7 @@ con.connect(function(err) {
     console.log("Connected!");
 });
 
-app.post("/Login", (req,res) =>{
+app.get("/Login", (req,res) =>{
 
     res.send("helloworld");
 
